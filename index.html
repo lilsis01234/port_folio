@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabiola's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const textElement = document.getElementById("animated-text");
+            const textContent = "Passionated 18 years old MERN stack developer. Motivated to cooperate and achieve great results in team projects.";
+            const words = textContent.split("");
+            let wordIndex = 0;
+
+            function displayNextWord() {
+                if (wordIndex < words.length) {
+                    textElement.innerHTML += words[wordIndex] + "";
+                    wordIndex++;
+                } else {
+                    textElement.innerHTML = "";
+                    wordIndex = 0;
+                }
+                setTimeout(displayNextWord, 100); 
+            }
+
+            displayNextWord();
+        });
+
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li class="nav-item"><a href="#experience"><i class="fas fa-briefcase"></i> Overview</a>
+                    <ul class="dropdown">
+                        <li><a href="#professional"><i class="fas fa-briefcase"></i> Professional/educational background</a></li>
+                        <li><a href="#projects"><i class="fas fa-laptop-code"></i> Personal projects</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li class="nav-item"><a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                    <ul class="dropdown">
+                        <li><a href="#info"><i class="fas fa-info-circle"></i> Contact information</a></li>
+                        <li><a href="#getintouch"><i class="fas fa-comments"></i> Get in touch</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <div class="photo-container">
+            <img src="img/photo.png" alt="Fabiola's Photo" class="profile-photo">
+        </div>
+        <div class="overlay">
+            <div class="hi">
+                <h1 class="title">RAHARIMANANA</h1>
+                <h1 class="nom">Tianantenaina Fabiola</h1>
+                <a href="path/to/your/cv.pdf" class="cv-button" download>Download CV</a>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="about" class="section">
+        <div class="intro-about">
+            <div class="photo">
+                <div class="photo-about">
+                    <img src="img/photo.png" alt="Fabiola's Photo" class="profile-photo">
+                </div>
+            </div>
+                <div class="container">
+                    <h2><i class="fas fa-user"></i> About Me</h2>
+                    <p id="animated-text" class="animated-text"></p>
+                </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="exp-container">
+            <h2> <i class="fas fa-user"></i> Overview of Myself</h2>
+
+            <section id="professional" class="section">
+            <div class="experience-section">
+                <div class="flex">
+                    <div class="experience-item">
+                        <img class="first-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsdr5Z3rEPiUJFvJZxj9zKeB-wkW5IOuPE4A&s" alt="Web Development Icon">
+                        <img class="second-img" src="https://cdn.cleancommit.io/blog/2022/12/web-development-image.png">
+                    </div>
+                    <div class="experience-item">
+                        <img class="first-img" src="https://upload.wikimedia.org/wikipedia/fr/c/cd/LOGO_ESTI_JO.png" alt="Education Icon">
+                        <img class="second-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShva1uz1So_rWmu70aIVAEBcLGXYB9nC18Ow&s">
+                    </div>
+                </div>
+            </section>
+
+                <div class="flex">
+                    <div class="certificate">
+                        <img src="img/fabiola raharimanana - Intro to Programming.png">
+                    </div>
+                    <div class="certificate">
+                        <img src="img/fabiola raharimanana - Python.png">
+                    </div>
+                </div>
+                <h2><i class="fas fa-user"></i>Languages</h2>
+                <div class="flex">
+                    <div class="langage-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/255px-Flag_of_France.svg.png" alt="French Flag">
+                        <div class="text">
+                            <h1 class="frs">B2</h1>
+                        </div>
+                    </div>
+                    <div class="langage-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/800px-Flag_of_the_United_Kingdom.svg.png" alt="UK Flag">
+                        <div class="text">
+                            <h1>PA</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <section id="projects" class="section">
+        <div class="personal project">
+            <h2 id="projects"><i class="fas fa-code"></i>Projects</h2>
+            <div class="flex">
+                <div class="project"><a href="https://github.com/lilsis01234/Dokotera-oh"><img src="https://nairobientclinic.com/wp-content/uploads/2020/04/telemedicine.jpg" alt="Virtual Consultation Project"></a></div>
+                <div class="project"><a href="https://github.com/lilsis01234/nothing-just-nothing"><img src="https://futuremug.co.in/blog/wp-content/uploads/2023/04/Online-Training.png" alt="Training Management Project"></a></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="skills">
+            <h2><i class="fas fa-code"></i>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="https://miro.medium.com/v2/resize:fit:1024/0*74NwxNdMYcbJ6RPL.png" alt="React Native Icon">
+                </div>
+                <div class="skill">
+                    <img src="https://miro.medium.com/v2/resize:fit:1200/1*jDIj2SKAE-Bp32owLoHDjw.png" alt="ReactJS Icon">
+                </div>
+                <div class="skill">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsEjCQNyD3_JGsmTZ1Ng0a3WefsXra98wzCw&s" alt="Express Icon">
+                </div>
+                <div class="skill">
+                    <img src="https://www.logiquetechno.com/wp-content/uploads/2022/12/logo-python.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="contact">
+            <h2><i class="fas fa-user"></i> Get in touch</h2>
+            <div class="contact-container">
+                <div class="contact-item">
+                    <img src="https://static.vecteezy.com/ti/vecteur-libre/p3/21515060-google-gmail-logo-symbole-blanc-conception-vecteur-illustration-avec-noir-contexte-gratuit-vectoriel.jpg" alt="mail">
+                    <p>fabiola.rahar@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <img src="https://i.pinimg.com/564x/6b/ab/30/6bab3017350ca04c6fa05569672bd31e.jpg" alt="linkedin">
+                    <p>Fabiola Raharimanana</p>
+                </div>
+                <div class="contact-item">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-skype-141-437933.png?f=webp&w=256" alt="skype">
+                    <p>Fabiola Raharimanana</p>
+                </div>
+                <div class="contact-item">
+                    <img src="https://i.pinimg.com/736x/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.jpg" alt="github">
+                    <p>lilsis01234</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+               <p>&copy; 2024 Fabiola. All rights reserved.</p>
+    </footer>
+</body>
+</html>
